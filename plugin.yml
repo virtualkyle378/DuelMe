@@ -1,0 +1,11 @@
+name: DuelMe
+main: me.kyle.DuelMe.DuelMe
+version: .001
+softdepend: 
+- Multiverse-Core
+commands:
+   dm:
+      description: This is the core command to manage the plugin also comes with the handy-dandy /XPControl help command
+      usage: /XPControl <world> <item> <mode>
+      permission: XPControl.base
+      permission-message: you clever pony, sorry you can't do this. We don't want more server lag do we?

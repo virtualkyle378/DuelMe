@@ -1,0 +1,60 @@
+lobby:
+   world: world
+   spawnpoint:
+      x: 0
+      y: 0
+      z: 0
+      pitch: 0
+      yaw: 0
+arenas:
+   arena0:
+      pos1:
+         x: 0
+         z: 0
+      pos2:
+         x: 0
+         z: 0
+      spawn1:
+         x: 0
+         y: 0
+         z: 0
+         pitch: 0
+         yaw: 0
+      spawn2:
+         x: 0
+         y: 0
+         z: 0
+         pitch: 0
+         yaw: 0
+      stands:
+         x: 0
+         y: 0
+         z: 0
+         pitch: 0
+         yaw: 0
+      door1:
+         pos1:
+            x: 0
+            y: 0
+            z: 0
+         pos2:
+            x: 0
+            y: 0
+            z: 0
+      door1:
+         pos1:
+             x: 0
+             y: 0
+             z: 0
+         pos2:
+             x: 0
+             y: 0
+             z: 0
+      block1:
+         x: 0
+         y: 0
+         z: 0
+      block2:
+         x: 0
+         y: 0
+         z: 0
