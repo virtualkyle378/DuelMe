@@ -85,10 +85,14 @@ public class DuelMeInteractListener implements Listener {
 		//inv start
 //		plugin.getServer().getPlayerExact(arena.player[0]).getInventory().setContents(arena.armor);
 //		plugin.getServer().getPlayerExact(arena.player[1]).getInventory().setContents(arena.armor);
-		plugin.getServer().getPlayerExact(arena.player[0]).getInventory().setContents(arena.inventory);
-		plugin.getServer().getPlayerExact(arena.player[1]).getInventory().setContents(arena.inventory);
-		plugin.getServer().getPlayerExact(arena.player[0]).getInventory().setArmorContents(arena.armor);
-		plugin.getServer().getPlayerExact(arena.player[1]).getInventory().setArmorContents(arena.armor);
+		
+		
+//		plugin.getServer().getPlayerExact(arena.player[0]).getInventory().setContents(arena.inventory);
+//		plugin.getServer().getPlayerExact(arena.player[1]).getInventory().setContents(arena.inventory);
+//		plugin.getServer().getPlayerExact(arena.player[0]).getInventory().setArmorContents(arena.armor);
+//		plugin.getServer().getPlayerExact(arena.player[1]).getInventory().setArmorContents(arena.armor);
+		
+		
 //		plugin.getServer().getPlayerExact(arena.player[1]).getInventory().se
 		//ItemStack[] inv = ((InventoryHolder) arena.inventoryloc.getBlock());
 		//plugin.getServer().getPlayerExact(arena.player[0]).getInventory().setContents(inv.getContents());

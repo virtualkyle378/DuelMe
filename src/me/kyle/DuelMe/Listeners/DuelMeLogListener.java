@@ -73,10 +73,10 @@ public class DuelMeLogListener implements Listener {
 	}
 	
 	private void manageInvs(Player player, Player player2){
-		player.getInventory().clear();
-		player2.getInventory().clear();
-		player2.getInventory().setArmorContents(null);
-		player.getInventory().setArmorContents(null);
+//		player.getInventory().clear();
+//		player2.getInventory().clear();
+//		player2.getInventory().setArmorContents(null);
+//		player.getInventory().setArmorContents(null);
 	}
 	
 	private void resetArena(Arena i){
