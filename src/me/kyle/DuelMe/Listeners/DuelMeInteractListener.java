@@ -19,7 +19,7 @@ public class DuelMeInteractListener implements Listener {
 		plugin.getServer().getPluginManager().registerEvents(this, plugin);
 	}
 	
-	//@EventHandler
+	@EventHandler
 	public void playerInteractEvent(PlayerInteractEvent event){
 		if(event.getPlayer().getLocation().getWorld() != plugin.lobbyspawn.getWorld() || event.getClickedBlock() == null)
 			return;
@@ -81,22 +81,14 @@ public class DuelMeInteractListener implements Listener {
 		return null;
 	}
 	
-	public void countdown(final Arena arena){
-		//inv start
-//		plugin.getServer().getPlayerExact(arena.player[0]).getInventory().setContents(arena.armor);
-//		plugin.getServer().getPlayerExact(arena.player[1]).getInventory().setContents(arena.armor);
+	public void countdown(final Arena arena){	
 		
-		
+		//disabled inventory stuff
 //		plugin.getServer().getPlayerExact(arena.player[0]).getInventory().setContents(arena.inventory);
 //		plugin.getServer().getPlayerExact(arena.player[1]).getInventory().setContents(arena.inventory);
 //		plugin.getServer().getPlayerExact(arena.player[0]).getInventory().setArmorContents(arena.armor);
 //		plugin.getServer().getPlayerExact(arena.player[1]).getInventory().setArmorContents(arena.armor);
 		
-		
-//		plugin.getServer().getPlayerExact(arena.player[1]).getInventory().se
-		//ItemStack[] inv = ((InventoryHolder) arena.inventoryloc.getBlock());
-		//plugin.getServer().getPlayerExact(arena.player[0]).getInventory().setContents(inv.getContents());
-		//inv end
 		arena.running = true;
 		arena.pendingaccept = false;
 		stopMe(arena);//incase of a concurrent call ofc
@@ -143,7 +135,7 @@ public class DuelMeInteractListener implements Listener {
 		plugin.getServer().getScheduler().cancelTask(plugin.countdownid.get(arena));
 	}
 	
-	//@EventHandler TODO
+	@EventHandler 
 	public void onInteract(PlayerInteractEvent event){
 		if(event.getPlayer().getLocation().getWorld() != plugin.lobbyspawn.getWorld() || event.getClickedBlock() == null)
 			return;
@@ -161,7 +153,7 @@ public class DuelMeInteractListener implements Listener {
 				a.getZ() == b.getZ();
 	}
 	
-	//@EventHandler
+	@EventHandler
 	public void onBowInteract(PlayerInteractEvent event){
 		if(event.getPlayer().getLocation().getWorld() != plugin.lobbyspawn.getWorld())
 			return;

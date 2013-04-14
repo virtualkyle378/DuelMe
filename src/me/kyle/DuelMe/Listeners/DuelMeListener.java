@@ -5,6 +5,7 @@ import me.kyle.DuelMe.DuelMe;
 
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.util.Vector;
@@ -27,7 +28,7 @@ public class DuelMeListener implements Listener {
 	}
 	
 	//MODE2 BEGIN
-	//@EventHandler
+	@EventHandler
 	public void playerDeathEvent(EntityDamageEvent event){
 		Player player;
 		if(event.getEntity() instanceof Player)
@@ -64,6 +65,7 @@ public class DuelMeListener implements Listener {
 		loser.setHealth(20);
 		loser.setVelocity(new Vector());
 		loser.setFireTicks(0);
+		//disabled inventory stuff
 //		winner.getInventory().clear();
 //		loser.getInventory().clear();
 //		loser.getInventory().setArmorContents(null);
