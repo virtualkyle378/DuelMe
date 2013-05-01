@@ -84,10 +84,10 @@ public class DuelMeInteractListener implements Listener {
 	public void countdown(final Arena arena){	
 		
 		//disabled inventory stuff
-//		plugin.getServer().getPlayerExact(arena.player[0]).getInventory().setContents(arena.inventory);
-//		plugin.getServer().getPlayerExact(arena.player[1]).getInventory().setContents(arena.inventory);
-//		plugin.getServer().getPlayerExact(arena.player[0]).getInventory().setArmorContents(arena.armor);
-//		plugin.getServer().getPlayerExact(arena.player[1]).getInventory().setArmorContents(arena.armor);
+		plugin.getServer().getPlayerExact(arena.player[0]).getInventory().setContents(arena.inventory);
+		plugin.getServer().getPlayerExact(arena.player[1]).getInventory().setContents(arena.inventory);
+		plugin.getServer().getPlayerExact(arena.player[0]).getInventory().setArmorContents(arena.armor);
+		plugin.getServer().getPlayerExact(arena.player[1]).getInventory().setArmorContents(arena.armor);
 		
 		arena.running = true;
 		arena.pendingaccept = false;

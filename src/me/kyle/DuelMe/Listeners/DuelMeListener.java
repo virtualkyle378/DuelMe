@@ -66,10 +66,10 @@ public class DuelMeListener implements Listener {
 		loser.setVelocity(new Vector());
 		loser.setFireTicks(0);
 		//disabled inventory stuff
-//		winner.getInventory().clear();
-//		loser.getInventory().clear();
-//		loser.getInventory().setArmorContents(null);
-//		winner.getInventory().setArmorContents(null);
+		winner.getInventory().clear();
+		loser.getInventory().clear();
+		loser.getInventory().setArmorContents(null);
+		winner.getInventory().setArmorContents(null);
 	}
 	//MODE2 END
 }
