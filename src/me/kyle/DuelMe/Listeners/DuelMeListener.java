@@ -61,6 +61,7 @@ public class DuelMeListener implements Listener {
 		winner.sendMessage(ChatColor.GREEN + "[DuelMe] You won the duel!");
 		winner.setHealth(20);
 		loser.sendMessage(ChatColor.RED + "[DuelMe] You lost the duel!");//add a method that has this code rather than copy/paste
+		winner.teleport(plugin.lobbyspawn);
 		loser.teleport(plugin.lobbyspawn);
 		loser.setHealth(20);
 		loser.setVelocity(new Vector());
