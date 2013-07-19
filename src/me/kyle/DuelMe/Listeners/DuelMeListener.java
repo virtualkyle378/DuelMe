@@ -35,19 +35,19 @@ public class DuelMeListener implements Listener {
 			player = (Player)event.getEntity();
 		else
 			return;
-		System.out.println("one");
+		//System.out.println("one");
 		if(!(event.getDamage() >= player.getHealth()))
 			return;
-		System.out.println("two");
+		//System.out.println("two");
 		for(Arena i: plugin.arenas.values()){
 			if(i.player[0].equalsIgnoreCase(player.getName()) || i.player[1].equalsIgnoreCase(player.getName()) && i.running){
-				System.out.println("three");
+				//System.out.println("three");
 				event.setCancelled(true);//TODO what if thewy kill emselves
 				if(i.player[0].equalsIgnoreCase(player.getName())){
 					manageWinner(plugin.getServer().getPlayerExact(i.player[1]), plugin.getServer().getPlayerExact(i.player[0]));//TODO use player inseaad of searcking
-					System.out.println("four");
+					//System.out.println("four");
 				} else {
-					System.out.println("five");
+					//System.out.println("five");
 					manageWinner(plugin.getServer().getPlayerExact(i.player[0]), plugin.getServer().getPlayerExact(i.player[1]));
 				}
 				plugin.util.resetArena(i);
