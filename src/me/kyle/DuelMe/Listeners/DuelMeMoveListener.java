@@ -3,10 +3,13 @@ package me.kyle.DuelMe.Listeners;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Material;
+import org.bukkit.entity.Horse;
 import org.bukkit.entity.Player;
+import org.bukkit.entity.Horse.Variant;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerMoveEvent;
+import org.bukkit.inventory.ItemStack;
 
 import me.kyle.DuelMe.Arena;
 import me.kyle.DuelMe.DuelMe;
@@ -99,5 +102,24 @@ public class DuelMeMoveListener implements Listener {
 		arena.pendingaccept = true;
 		arena.block[0].getBlock().setType(Material.GLOWSTONE);
 		arena.block[1].getBlock().setType(Material.GLOWSTONE);
+	
+		//if (useHorsesOrSomething) {
+		Horse horse1 = initHorse(player1);
+		Horse horse2 = initHorse(player2);
+		
+		horse1.setPassenger(player1);
+		horse2.setPassenger(player2);
+		//}
+	}
+	
+	private Horse initHorse(Player player) {
+		Horse horse = (Horse) player.getWorld().spawn(player.getLocation(), Horse.class);
+		horse.setAdult();
+		horse.setTamed(true);
+		horse.setVariant(Variant.SKELETON_HORSE);
+		horse.getInventory().setItem(0, new ItemStack(Material.SADDLE));
+		horse.getInventory().setItem(0, new ItemStack(Material.DIAMOND_BARDING));
+		
+		return horse;
 	}
 }
